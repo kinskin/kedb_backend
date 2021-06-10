@@ -11,7 +11,7 @@ const PATHS = {
     },
     genre: {
         movie: { path: "/movie/list", method: "get" },
-        tv: { path: "/tv/list", method: "get" },
+        series: { path: "/tv/list", method: "get" },
     },
     base: {
         movie: { path: "/movie", method: "get" },

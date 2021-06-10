@@ -1,8 +1,8 @@
 import express from "express";
-import { logging } from "./src/utils/misc.js";
 
-import MovieDB from "./src/api/movie_db.js";
-import Cache from "./src/utils/cache.js";
+import { MovieDB } from "./src/api/index.js";
+
+import { logging } from "./src/utils/misc.js";
 
 class KEDB {
     constructor() {
@@ -14,10 +14,11 @@ class KEDB {
     }
 
     async start() {
-        await this.movie_db.init_movies();
+        await this.movie_db.init();
         this.app.listen(this.PORT, logging(`Listening to PORT ${this.PORT}`));
     }
 }
 
+//Initialize KEDB Application
 const kedb = new KEDB();
 kedb.start();
