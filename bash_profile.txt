@@ -1,0 +1,24 @@
+#SUPPRESS WARNING
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+#COLOR
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export PS1="\n( ☞ ﾟヮﾟ) ☞   \[\e[31m\]kinskin\[\e[0m\]   ☜ (ﾟヮﾟ☜ )\n\e[31m\]=> \w \[\e[0m\]\n\e[31m\]Command: \[\e[0m\]"
+
+#GENERAL ALIASES
+alias ~='cd ~'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias l='ls -l'
+alias ll='ls -la'
+alias la='ls -la'
+alias c='clear'
+alias cdw='cd ~/linq_cash/work/leogay-source-code/'
+alias cds='cd ~/personal/shiok'
+alias reboot='sudo shutdown -r now'
+alias halt='sudo halt'
+alias profile='nano ~/.bash_profile'
+alias reload='. ~/.bash_profile'
+cd() { builtin cd "$@"; ls -l; }
